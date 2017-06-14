@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon.ico">
+    <title>Pokédex</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="titulo">
+        <h1>Pokédex</h1>
+      </div>
+      <div class="buscador">
+        <input id="input-buscador" type="text" name="buscador" value="">
+      </div>
+      <div class="lista-pokemons">
+        <div class="pokemon">
+          <img src="assets/img/015.png" alt="">
+          <div class="comandos">
+            <div class="iconos">
+              <img class="icon" src="assets/icon/pokeball_gray.png" alt="">
+              <img class="icon" src="assets/icon/valentines-heart.png" alt="">
+              <img class="icon" src="assets/icon/data.png" alt="">
+            </div>
+            <span class="nombre-pokemon">nomprepokemon</span>
+          </div>
+        </div>
+        <div class="pokemon"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://pokeapi.co/api/v2/pokedex/1/"></script>
+    <script src="js/index.js" charset="utf-8"></script>
+  </body>
+</html>
