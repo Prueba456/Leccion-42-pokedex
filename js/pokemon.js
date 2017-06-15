@@ -14,5 +14,8 @@ const imagen = (i) => {
     return img;
 
   }
-    // return img;
+}
+const nombrePokemon = (i)=> {
+  const nombre = $('<span class="nombre-pokemon">'+ state.dataPokemon.pokemon_entries[i-1].pokemon_species.name+'</span>');
+  return nombre;
 }
