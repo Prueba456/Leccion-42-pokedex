@@ -35,6 +35,7 @@ h1{
 img{
   width: 100%;
 }
+
 .lista-pokemons{
   margin-top: 40px;
   display: flex;
@@ -63,4 +64,47 @@ img{
 }
 .nombre-pokemon{
   font-size: 15px;
+}
+.descripcion{
+  position: fixed;
+  z-index: 4;
+  width: 1100px;;
+  height: 400px;
+  background-color: #e0dede;
+  visibility: hidden;
+}
+
+.izquierda{
+  padding-left: 20%;
+  padding-top: 50px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: inline-block;
+}
+
+.caracteristica{
+  width: 100%;
+  height: 100px;
+  background-color: #6c97fc;
+  margin-top: 10px;
+}
+.derecha{
+  padding-top: 10px;
+  word-wrap: break-word;
+  top: 0;
+  right: 200px;
+  position: absolute;
+  display: inline-block;
+  width: 400px;
+}
+h2, p, .tipo, .debilidad{
+  margin-bottom: 10px;
+}
+.tipo, .debilidad{
+  padding-left: 3px;
+  text-align: center;
+  display: inline-block;
+  width: 80px;
+  background-color: green;
 }

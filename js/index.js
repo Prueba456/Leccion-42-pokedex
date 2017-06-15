@@ -1,7 +1,7 @@
 'use strict';
 const render = (root)=> {
   root.empty();
-  for (var i = 1; i < 201; i++) {
+  for (var i = 1; i < 51; i++) {
     const pokemon   = $('<div class="pokemon"></div>');
     /*imagen de pokemons*/
     // const imagen    = $('<img src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="">');
@@ -21,11 +21,14 @@ const render = (root)=> {
     comandos.append(nombrePokemon(i)); /*Nombre pokemon*/
     root.append(pokemon);
   }
+  $( ".pokemon img" ).on( "click", muestraModal );
 }
+
 
   const state = {
     dataPokemon: null,
-    status: null
+    status: null,
+    descripcionPokemon: null
  };
 
 $( _ => {
@@ -34,7 +37,8 @@ $( _ => {
     if (err) { return alert(err.message);}
 
     state.dataPokemon = json; /*Trae toda la data*/
-    console.log(json.pokemon_entries[0].pokemon_species.name);
+    // const ejemplo = state.dataPokemon.pokemon_entries[0].pokemon_species.url;
+    // console.log(ejemplo);
 
     const root = $('.lista-pokemons');
     render(root);
