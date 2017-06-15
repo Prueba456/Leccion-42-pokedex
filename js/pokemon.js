@@ -12,20 +12,25 @@ const imagen = (i) => {
   }else{
     const img    = $('<img id='+i+' src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+ i +'.png" alt="">');
     return img;
-
   }
 }
 
 function muestraModal(e) {
-  alert( "clicked" );
+  // alert( "clicked" );
   var id = e.target.id;
   console.log(id);
-
-    getJSON('http://pokeapi.co/api/v2/pokemon-species/'+id+'/', (err, json) => {
-      if (err) { return alert(err.message);}
-      state.descripcionPokemon = json; /*Trae toda la data*/
-      console.log(json.flavor_text_entries[3].flavor_text);
-    });
+  getJSON('http://pokeapi.co/api/v2/pokemon-species/'+id+'/', (err, json) => {
+    if (err) { return alert(err.message);}
+    state.descripcionPokemon = json; /*Trae toda la data*/
+    console.log(json.flavor_text_entries[3].flavor_text);
+    descripcionP(json);
+  });
+  const descripcionP = (json)=>{
+    const descripcion = $('.descripcionPokemon');
+     descripcion.text(json.flavor_text_entries[3].flavor_text);
+    return descripcion;
+  }
+  $('.descripcion').css("display","block");
 }
 
 const nombrePokemon = (i)=> {

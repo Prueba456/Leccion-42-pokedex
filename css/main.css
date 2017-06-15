@@ -71,7 +71,7 @@ img{
   width: 1100px;;
   height: 400px;
   background-color: #e0dede;
-  visibility: hidden;
+  display: none;
 }
 
 .izquierda{
