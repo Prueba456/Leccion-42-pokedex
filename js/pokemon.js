@@ -21,13 +21,11 @@ function muestraModal(e) {
   var id = e.target.id;
   console.log(id);
 
-  // const descripcionPK = (id)=> {
-  //   getJSON('http://pokeapi.co/api/v2/pokemon-species/'+id+'/', (err, json) => {
-  //     if (err) { return alert(err.message);}
-  //     // console.log(json.flavor_text_entries[3].flavor_text);
-  //     state.descripcionPokemon = json; /*Trae toda la data*/
-  //   });
-  // }
+    getJSON('http://pokeapi.co/api/v2/pokemon-species/'+id+'/', (err, json) => {
+      if (err) { return alert(err.message);}
+      state.descripcionPokemon = json; /*Trae toda la data*/
+      console.log(json.flavor_text_entries[3].flavor_text);
+    });
 }
 
 const nombrePokemon = (i)=> {
