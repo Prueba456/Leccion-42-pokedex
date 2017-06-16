@@ -17,8 +17,11 @@ const imagen = (i) => {
 
 function muestraModal(e) {
   // alert( "clicked" );
+    $('.nombrePokemon').empty();
+      $('.izquierda .pokemon').empty();
   var id = e.target.id;
-  console.log(id);
+  var elemento = e.target;
+  console.log(elemento);
   getJSON('http://pokeapi.co/api/v2/pokemon-species/'+id+'/', (err, json) => {
     if (err) { return alert(err.message);}
     state.descripcionPokemon = json; /*Trae toda la data*/
@@ -30,6 +33,8 @@ function muestraModal(e) {
      descripcion.text(json.flavor_text_entries[3].flavor_text);
     return descripcion;
   }
+  $('.nombrePokemon').append(nombrePokemon(id));
+  $(elemento).clone().appendTo('.izquierda .pokemon');
   $('.descripcion').css("display","block");
 }
 
