@@ -33,6 +33,10 @@ function muestraModal(e) {
   $('.descripcion').css("display","block");
 }
 
+function cerrarModal(e) {
+  $('.descripcion').css("display","none");
+}
+
 const nombrePokemon = (i)=> {
   const nombre = $('<span class="nombre-pokemon">'+ state.dataPokemon.pokemon_entries[i-1].pokemon_species.name+'</span>');
   return nombre;

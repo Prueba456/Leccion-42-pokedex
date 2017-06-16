@@ -22,6 +22,8 @@ const render = (root)=> {
     root.append(pokemon);
   }
   $( ".pokemon img" ).on( "click", muestraModal );
+  $( ".cerrar img" ).on( "click", cerrarModal );
+
 }
 
 

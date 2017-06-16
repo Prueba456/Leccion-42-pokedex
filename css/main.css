@@ -65,13 +65,20 @@ img{
 .nombre-pokemon{
   font-size: 15px;
 }
+.cerrar{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
 .descripcion{
   position: fixed;
   z-index: 4;
   width: 1100px;;
   height: 400px;
   background-color: #e0dede;
-  display: none;
+  display:none ;
 }
 
 .izquierda{
