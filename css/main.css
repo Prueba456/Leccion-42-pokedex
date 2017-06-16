@@ -3,6 +3,15 @@
   padding: 0;
   font-family: sans-serif;
 }
+/*@font-face {
+  font-family: 'Flexo';
+  src: url("../assets/font/Flexo/Flexo-Regular.otf");
+}
+.style-title {
+  color: gray;
+  font-size: 50px;
+  font-family: 'Flexo';
+}*/
 .container{
   margin-right: 12%;
   margin-left: 12%;
