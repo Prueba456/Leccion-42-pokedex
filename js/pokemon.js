@@ -27,11 +27,19 @@ function muestraModal(e) {
     state.descripcionPokemon = json; /*Trae toda la data*/
     console.log(json.flavor_text_entries[3].flavor_text);
     descripcionP(json);
+    tipo(json);
   });
   const descripcionP = (json)=>{
     const descripcion = $('.descripcionPokemon');
      descripcion.text(json.flavor_text_entries[3].flavor_text);
     return descripcion;
+  }
+  const tipo = (json)=>{
+    const tipoP = $('.tipo');
+    tipoP.css("background-color",json.color.name);
+    console.log(json.egg_groups[0].name);
+     tipoP.text(json.egg_groups[0].name);
+    return tipoP;
   }
   $('.nombrePokemon').append(nombrePokemon(id));
   $(elemento).clone().appendTo('.izquierda .pokemon');
